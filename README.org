@@ -1,0 +1,38 @@
+#+TITLE: Avyium
+
+[[https://melpa.org/#/avyium][file:https://melpa.org/packages/avyium-badge.svg]]
+[[https://github.com/twlz0ne/avyium/actions?query=workflow%3ACI][file:https://github.com/twlz0ne/avyium/workflows/CI/badge.svg]]
+
+Vimium like for Emacs based on avy
+
+* Installing
+
+Simply grab it from [[https://melpa.org/][MELPA]].
+
+** [[https://github.com/jwiegley/use-package][use-package]]
+
+#+begin_src emacs-lisp
+(use-package avyium
+  :ensure t)
+#+end_src
+
+** [[https://github.com/raxod502/straight.el][straight.el]]
+
+#+begin_src emacs-lisp
+(straight-use-package 'avyium)
+#+end_src
+
+** package.el
+
+[[https://melpa.org/#/getting-started][Ensure you have MELPA available.]]
+
+=M-x package-install RET avyium RET=.
+
+** Manual
+
+Just fetch [[file:avyium.el][avyium.el]], save it somewhere and load it into
+Emacs.
+
+* Use
+
+Just =M-x avyium-mode RET=.
