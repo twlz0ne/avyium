@@ -8,7 +8,7 @@
 ;; Keywords: convenience, www, avy, eww, w3m
 ;; Package-Requires: ((emacs "28.1") (avy "0.5"))
 ;; Version: 0.0.14
-;; Last-Updated: 2024-11-26 12:02:13 +0800
+;; Last-Updated: 2024-11-26 12:08:08 +0800
 ;;           by: Gong Qijian
 
 ;; This file is not part of GNU Emacs
@@ -28,7 +28,11 @@
 
 ;;; Commentary:
 
+;; # Avyium
+
 ;; [Vimium](https://github.com/philc/vimium) like for Emacs based on [avy](https://github.com/abo-abo/avy).
+
+;; ![Screenshot](./screenshot.png)
 
 ;; ## Requirements
 
