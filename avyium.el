@@ -8,7 +8,7 @@
 ;; Keywords: convenience, www, avy, eww, w3m
 ;; Package-Requires: ((emacs "28.1") (avy "0.5"))
 ;; Version: 0.0.14
-;; Last-Updated: 2024-11-25 19:34:17 +0800
+;; Last-Updated: 2024-11-26 12:02:13 +0800
 ;;           by: Gong Qijian
 
 ;; This file is not part of GNU Emacs
@@ -248,13 +248,14 @@ PROP decide how a link will be located, see `avyium--loop-element-visible' for d
     (with-current-buffer buffer
       (let ((inhibit-read-only t))
         (erase-buffer)
-        (page-break-lines-mode 1)
+        (when (featurep 'page-break-lines)
+          (funcall #'page-break-lines-mode 1))
         (insert "Avyium keys\n\n")
         (dolist (key-group avyium-keys)
           (insert ?\^L "\n")
           (insert ";; " (car key-group) "\n\n")
           (mapc (pcase-lambda (`(,key ,desc ,_cmd))
-                  (insert (format "%-15s %s\n" key desc)))
+                  (insert (format "%-16s %s\n" key desc)))
                 (cdr key-group))
           (insert "\n"))))
     (view-buffer-other-window buffer)))
